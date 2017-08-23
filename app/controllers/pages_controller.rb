@@ -14,22 +14,22 @@ class PagesController < ApplicationController
   		a.save
   	end
   	redirect_to pages_batmanvssuperman_path notice: "Su voto ha sido registrado"
-  	@batman = VotosBatman.all	
+  	@batman = a.all	
   end
   def votos_superman
 
-  	a	= VotosSuperman.new
+  	b	= VotosSuperman.new
   	if params[:nombre].present?
-  		a.nombre = params[:nombre]#
+  		b.nombre = params[:nombre]
   	end
   	if params[:email].present?
-  		a.email = params[:email]
+  		b.email = params[:email]
   	end
   	if params[:nombre].present? || params[:email].present?
-  		a.save
+  		b.save
   	end
   	redirect_to pages_batmanvssuperman_path notice: "Su voto ha sido registrado"
-  	@batman = VotosSuperman.all	
+  	@batman = b.all	
   end
 
 end
