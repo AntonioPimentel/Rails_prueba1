@@ -1,0 +1,34 @@
+<div class=col-md-6>
+	<a href="<%= pages_batman_path%>"><img src="<%= asset_path 'Batman.jpg'%>" alt=""></a>
+		<%= form_tag(pages_votos_batman_path) do %>
+								<div class="field">
+									<%= label_tag "nombre", "Nombre" %>
+									<%= text_field_tag "nombre"%>
+								</div>
+								<div class="field">
+									<%= label_tag "email", "Email" %>
+									<%= email_field_tag "email"%>
+								</div>
+								<ul class="actions">
+									<li><%= submit_tag "Votar por Batman" %></li>
+								</ul>
+							<% end -%>
+
+</div>
+<div class=col-md-6>
+	<a href="<%= pages_superman_path%>"><img src="<%= asset_path 'Superman.jpg'%>" alt=""></a>
+
+	<%= form_tag(pages_votos_superman_path) do %>
+								<div class="field">
+									<%= label_tag "nombre", "Nombre" %>
+									<%= text_field_tag "nombre"%>
+								</div>
+								<div class="field">
+									<%= label_tag "email", "Email" %>
+									<%= email_field_tag "email"%>
+								</div>
+								<ul class="actions">
+									<li><%= submit_tag "Votar por Superman" %></li>
+								</ul>
+							<% end -%>
+</div>
